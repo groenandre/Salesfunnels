@@ -1,12 +1,13 @@
 import re
 import shared
 from playwright.sync_api import Page, expect
+from variables import AccMenzSalesUrl
 
 bsn_nummer_een = shared.generate_valid_bsn()
 bsn_nummer_twee = shared.generate_valid_bsn()
 
 def test_example(page: Page) -> None:
-    page.goto("https://www2.acc.menzis.nl/premie-berekenen-en-aanvragen")
+    page.goto(AccMenzSalesUrl)
     page.get_by_role("button", name="Accepteren").click()
     #Aantal verzekerdem
     page.get_by_role("button", name="+").nth(2).click()
