@@ -1,7 +1,7 @@
 import re
 import shared
 from playwright.sync_api import Page, expect
-from variables import AccMenzSalesUrl
+from variables import AccMenzSalesUrl, TstMenzSalesUrl
 
 bsn_nummer_een = shared.generate_valid_bsn()
 bsn_nummer_twee = shared.generate_valid_bsn()
